@@ -1,5 +1,6 @@
 #import "SEGTrackPayload.h"
 
+
 @implementation SEGTrackPayloadBuilder
 
 - (instancetype)init

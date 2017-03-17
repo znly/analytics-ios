@@ -37,8 +37,7 @@ class TrackPayloadTest: QuickSpec {
         builder.properties = ["revenue" : 10.99]
         
         let payload = SEGTrackPayload(builder: builder)
-        // todo: verify the properties are exact.
-        expect(payload.properties).notTo(beNil())
+        expect((payload.properties as? NSDictionary)) == ["revenue" : 10.99] as NSDictionary
       }
     }
   }
