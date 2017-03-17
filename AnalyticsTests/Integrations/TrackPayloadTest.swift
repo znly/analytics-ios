@@ -12,7 +12,7 @@ class TrackPayloadTest: QuickSpec {
       it("fails for empty event") {
         let builder = SEGTrackPayloadBuilder()
         builder.event = ""
-        expect { SEGTrackPayload(builder: SEGTrackPayloadBuilder()) }.to(raiseException(reason:"event ((null)) must not be null or empty."))
+        expect { SEGTrackPayload(builder: builder) }.to(raiseException(reason:"event () must not be null or empty."))
       }
       
       it("succeeds for valid event") {
@@ -37,7 +37,7 @@ class TrackPayloadTest: QuickSpec {
         builder.properties = ["revenue" : 10.99]
         
         let payload = SEGTrackPayload(builder: builder)
-        expect((payload.properties as? NSDictionary)) == ["revenue" : 10.99] as NSDictionary
+        expect((payload.properties as! NSDictionary)) == ["revenue" : 10.99] as NSDictionary
       }
     }
   }

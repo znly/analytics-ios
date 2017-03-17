@@ -12,7 +12,7 @@ class ScreenPayloadTest: QuickSpec {
       it("fails for empty name") {
         let builder = SEGScreenPayloadBuilder()
         builder.name = ""
-        expect { SEGScreenPayload(builder: SEGScreenPayloadBuilder()) }.to(raiseException(reason:"name ((null)) must not be null or empty."))
+        expect { SEGScreenPayload(builder: builder) }.to(raiseException(reason:"name () must not be null or empty."))
       }
       
       it("succeeds for valid name") {

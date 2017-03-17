@@ -3,6 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface SEGScreenPayloadBuilder : SEGPayloadBuilder
 
 @property (nonatomic, copy, nullable) NSString *name;
@@ -13,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
 @interface SEGScreenPayload : SEGPayload
 
 @property (nonatomic, readonly) NSString *name;
@@ -22,9 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) JSON_DICT properties;
 
 - (instancetype)initWithName:(NSString *)name
-                  properties:(NSDictionary * _Nullable)properties
-                     context:(NSDictionary *)context
-                integrations:(NSDictionary *)integrations;
+                  properties:(JSON_DICT _Nullable)properties
+                     context:(JSON_DICT)context
+                integrations:(JSON_DICT)integrations;
 
 - (instancetype)initWithBuilder:(SEGScreenPayloadBuilder *)builder;
 

@@ -16,9 +16,9 @@
 @implementation SEGScreenPayload
 
 - (instancetype)initWithName:(NSString *)name
-                  properties:(NSDictionary *)properties
-                     context:(NSDictionary *)context
-                integrations:(NSDictionary *)integrations
+                  properties:(JSON_DICT)properties
+                     context:(JSON_DICT)context
+                integrations:(JSON_DICT)integrations
 {
     if (self = [super initWithContext:context integrations:integrations]) {
         _name = [name copy];
@@ -31,14 +31,14 @@
 {
     if (self = [super initWithBuilder:builder]) {
         NSParameterAssert(builder);
-        
+
         NSString *name = builder.name;
         NSCAssert1(name.length > 0, @"name (%@) must not be null or empty.", name);
         _name = name;
 
         _properties = [builder.properties copy];
     }
-    
+
     return self;
 }
 

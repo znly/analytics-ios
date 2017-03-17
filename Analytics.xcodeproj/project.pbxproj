@@ -10,6 +10,7 @@
 		3481C14AEC76E5A8DA64DA59 /* Pods_AnalyticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89033CBF22319674E6CE7E61 /* Pods_AnalyticsTests.framework */; };
 		6ECE1D141E79399800E13818 /* TrackPayloadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECE1D131E79399800E13818 /* TrackPayloadTest.swift */; };
 		6ECFF4911E7BBE3F001DFB01 /* ScreenPayloadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFF4901E7BBE3F001DFB01 /* ScreenPayloadTest.swift */; };
+		6ECFF4931E7BCC9A001DFB01 /* IdentifyPayloadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFF4921E7BCC9A001DFB01 /* IdentifyPayloadTest.swift */; };
 		EA88A5981DED7608009FB66A /* SEGSerializableValue.h in Headers */ = {isa = PBXBuildFile; fileRef = EA88A5971DED7608009FB66A /* SEGSerializableValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8F09741E24C5C600B8B93F /* MiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8F09731E24C5C600B8B93F /* MiddlewareTests.swift */; };
 		EADEB8601DECD080005322DA /* Analytics.h in Headers */ = {isa = PBXBuildFile; fileRef = EADEB85E1DECD080005322DA /* Analytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +89,7 @@
 		1DF03A6929EEFE7158913224 /* Pods-AnalyticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6ECE1D131E79399800E13818 /* TrackPayloadTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackPayloadTest.swift; path = Integrations/TrackPayloadTest.swift; sourceTree = "<group>"; };
 		6ECFF4901E7BBE3F001DFB01 /* ScreenPayloadTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPayloadTest.swift; sourceTree = "<group>"; };
+		6ECFF4921E7BCC9A001DFB01 /* IdentifyPayloadTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentifyPayloadTest.swift; path = Integrations/IdentifyPayloadTest.swift; sourceTree = "<group>"; };
 		89033CBF22319674E6CE7E61 /* Pods_AnalyticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BF8AE673FE0FD91DF5B503 /* Pods-AnalyticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA88A5971DED7608009FB66A /* SEGSerializableValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEGSerializableValue.h; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				6ECE1D131E79399800E13818 /* TrackPayloadTest.swift */,
 				6ECFF4901E7BBE3F001DFB01 /* ScreenPayloadTest.swift */,
+				6ECFF4921E7BCC9A001DFB01 /* IdentifyPayloadTest.swift */,
 			);
 			name = Integrations;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				6ECFF4911E7BBE3F001DFB01 /* ScreenPayloadTest.swift in Sources */,
 				EA8F09741E24C5C600B8B93F /* MiddlewareTests.swift in Sources */,
 				EADEB8EF1DECD335005322DA /* NSData+SEGGUNZIPP.m in Sources */,
+				6ECFF4931E7BCC9A001DFB01 /* IdentifyPayloadTest.swift in Sources */,
 				EADEB8F01DECD335005322DA /* TestUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
