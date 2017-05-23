@@ -78,7 +78,7 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
 #if TARGET_OS_IPHONE
         self.flushTaskID = UIBackgroundTaskInvalid;
 #endif
-        
+
         // load traits & user from disk.
         [self loadUserId];
         [self loadTraits];
@@ -104,9 +104,9 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
                                                 selector:@selector(flush)
                                                 userInfo:nil
                                                  repeats:YES];
-        
+
         [NSRunLoop.mainRunLoop addTimer:self.flushTimer
-                                forMode:NSDefaultRunLoopMode];        
+                                forMode:NSDefaultRunLoopMode];
     }
     return self;
 }
@@ -127,7 +127,7 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
     [self endBackgroundTask];
 
     seg_dispatch_specific_sync(_backgroundTaskQueue, ^{
-        
+
         id<SEGApplicationProtocol> application = [self.analytics oneTimeConfiguration].application;
         if (application && [application respondsToSelector:@selector(seg_beginBackgroundTaskWithName:expirationHandler:)]) {
             self.flushTaskID = [application seg_beginBackgroundTaskWithName:@"Segmentio.Flush"
@@ -292,9 +292,9 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
         [payload setValue:[context copy] forKey:@"context"];
 
         SEGLog(@"%@ Enqueueing action: %@", self, payload);
-        
+
         NSDictionary *queuePayload = [payload copy];
-        
+
         if (self.configuration.experimental.rawSegmentModificationBlock != nil) {
             NSDictionary *tempPayload = self.configuration.experimental.rawSegmentModificationBlock(queuePayload);
             if (tempPayload == nil) {
@@ -338,7 +338,7 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
         }
         [self sendData:batch];
     };
-    
+
 #if TARGET_OS_IPHONE
     [self dispatchBackground:^{
         if ([self.queue count] == 0) {
@@ -402,7 +402,7 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
     SEGLog(@"Flushing batch %@.", payload);
 
     self.batchRequest = [self.httpClient upload:payload forWriteKey:self.configuration.writeKey completionHandler:^(BOOL retry) {
-        
+
 #if TARGET_OS_IPHONE
         void (^completion)(void) = ^{
             if (retry) {
@@ -432,7 +432,7 @@ NSString *const kSEGTraitsFilename = @"segmentio.traits.plist";
             self.batchRequest = nil;
         };
 #endif
-        
+
         [self dispatchBackground:completion];
     }];
 
