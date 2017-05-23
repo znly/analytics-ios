@@ -111,21 +111,12 @@ static BOOL GetAdTrackingEnabled()
                                                 selector:@selector(flush)
                                                 userInfo:nil
                                                  repeats:YES];
-        
+
         [NSRunLoop.mainRunLoop addTimer:self.flushTimer
                                 forMode:NSDefaultRunLoopMode];
     }
     return self;
 }
-
-/*
- * There is an iOS bug that causes instances of the CTTelephonyNetworkInfo class to
- * sometimes get notifications after they have been deallocated.
- * Instead of instantiating, using, and releasing instances you * must instead retain
- * and never release them to work around the bug.
- *
- * Ref: http://stackoverflow.com/questions/14238586/coretelephony-crash
- */
 
 #if TARGET_OS_IOS
 static CTTelephonyNetworkInfo *_telephonyNetworkInfo;
