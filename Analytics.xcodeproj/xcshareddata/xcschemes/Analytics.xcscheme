@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EADEB85A1DECD080005322DA"
-               BuildableName = "Analytics.framework"
+               BuildableName = "SegmentAnalytics.framework"
                BlueprintName = "Analytics"
                ReferencedContainer = "container:Analytics.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EADEB85A1DECD080005322DA"
-            BuildableName = "Analytics.framework"
+            BuildableName = "SegmentAnalytics.framework"
             BlueprintName = "Analytics"
             ReferencedContainer = "container:Analytics.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EADEB85A1DECD080005322DA"
-            BuildableName = "Analytics.framework"
+            BuildableName = "SegmentAnalytics.framework"
             BlueprintName = "Analytics"
             ReferencedContainer = "container:Analytics.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EADEB85A1DECD080005322DA"
-            BuildableName = "Analytics.framework"
+            BuildableName = "SegmentAnalytics.framework"
             BlueprintName = "Analytics"
             ReferencedContainer = "container:Analytics.xcodeproj">
          </BuildableReference>
